@@ -10,3 +10,6 @@ SELECT table_schema,
        (xpath('/row/c/text()', query_to_xml(format('select count(*) as c from %I.%I', table_schema, TABLE_NAME), FALSE, TRUE, '')))[1]::text::int AS rows_n
 FROM tbl
 ORDER BY rows_n DESC;
+
+-- Get Timezone
+SELECT current_setting('Timezone');
