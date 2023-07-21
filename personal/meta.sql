@@ -13,3 +13,10 @@ ORDER BY rows_n DESC;
 
 -- Get Timezone
 SELECT current_setting('Timezone');
+
+-- List all extensions that are installed in the current database
+SELECT * FROM pg_extension;
+
+-- Create citext extension
+CREATE EXTENSION IF NOT EXISTS citext;
+
